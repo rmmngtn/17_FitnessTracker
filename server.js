@@ -21,7 +21,7 @@ app.use(require("./routes/apiRoutes"));
 Mongoose.connect(process.eventNames.MONGODB_URI || "mongodb://localhost/workout", { 
   useNewUrlParser: true, 
   useFindAndModify: false, 
-  useCreateIndex: true, 
+   
 }); 
 
 
