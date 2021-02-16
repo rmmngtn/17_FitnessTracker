@@ -3,15 +3,15 @@ const Workout = require('../models/workoutsController');
 
 
 // gets saved/most recent workouts 
-// router.get("/api/workouts", async (req, res) => {
-//     const newWorkout = await Workout.find({}, (err, data) => {
-//     res.json(data)
-//     })
-// })
+router.get("/api/workouts", async (req, res) => {
+    const newWorkout = await Workout.find({}, (err, data) => {
+    res.json(data)
+    })
+})
 
 router.post("/api/workouts", async (req, res) => { 
     const newWorkout = await Workout.create({}) 
-    res.json(newWorkout)
+    res.json(newWorkout);
     
 }); 
 
