@@ -18,7 +18,7 @@ app.use(require("./routes/htmlRoutes"));
 app.use(require("./routes/apiRoutes")); 
 
 
-Mongoose.connect(process.eventNames.MONGODB_URI || "mongodb://localhost/fitnessTracker",  
+Mongoose.connect(process.eventNames.MONGODB_URI || "mongodb://localhost/workout",  
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
