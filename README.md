@@ -57,7 +57,7 @@ npm test
 ## Screenshots
 
 ![screenshot1](./images/homepage.png)
-![screenshot2](.images/dashboard.png)
+![screenshot2](./images/dashboard.png)
 
 
 ### Deployed App Heroku Link
