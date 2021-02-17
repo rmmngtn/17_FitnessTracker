@@ -3,7 +3,7 @@ const Mongoose = require("mongoose");
 const logger = require("morgan"); 
 
 
-const PORT = 3002;
+const PORT = process.env.PORT || 3002;
 const app = express();
 
 app.use(logger("dev"));
@@ -18,11 +18,14 @@ app.use(require("./routes/htmlRoutes"));
 app.use(require("./routes/apiRoutes")); 
 
 
-Mongoose.connect(process.eventNames.MONGODB_URI || "mongodb://localhost/workout", { 
-  useNewUrlParser: true, 
-  useFindAndModify: false, 
-   
-}); 
+Mongoose.connect(process.eventNames.MONGODB_URI || "mongodb://localhost/fitnessTracker",  
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+); 
 
 
 
